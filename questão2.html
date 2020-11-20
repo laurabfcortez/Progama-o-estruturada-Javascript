@@ -1,0 +1,41 @@
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Programação Estruturada</title>
+</head>
+
+<body>
+    <h1>Entrada do Programa</h1>
+    Data de Nascimento: <input type="date" id="birthday" value="" /><br />
+    <button onclick="executarExercicio()">OK</button>
+    <p id="resultado"></p>
+    <script>
+        function executarExercicio() {
+            var birthdayInput = document.getElementById("birthday").value;
+            var date = new Date();
+            var currentDay = date.getDate();
+            var currentMonth = date.getMonth() + 1;
+            var currentYear = date.getFullYear();
+            var birthdayDate = birthdayInput.split('-');
+            var birthdayDay = Number(birthdayDate[2]);
+            var birthdayMonth = Number(birthdayDate[1]);
+            var birthdayYear = Number(birthdayDate[0]);
+            var age = currentYear - birthdayYear;
+            if (birthdayMonth < currentMonth || currentMonth == birthdayMonth && currentDay < birthdayDay) {
+                age--
+            }
+            document.getElementById("resultado").innerHTML = `
+Você tem: ${age} anos
+`;
+        }
+    </script>
+    Programação Estruturada
+    Lista de Exercícios – Aulas 06, 07 e 08
+    Operadores JavaScript: Aritmética
+    Operadores Javascript: Strings
+    Operadores Javascript: Datas
+    4
+</body>
+
+</html>
