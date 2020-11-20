@@ -1,0 +1,62 @@
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Programação Estruturada</title>
+</head>
+
+<body>
+    <h1>Entrada do Programa</h1>
+    N1: <input type="number" id="a" value=""><br />
+    N2: <input type="number" id="b" value=""><br />
+    N3: <input type="number" id="c" value=""><br />
+    N4: <input type="number" id="d" value=""><br />
+    <button onclick='executarExercicio()'>OK</button>
+    <p id="resultadomaior"></p>
+    <p id="resultadomenor"></p>
+    <script>
+        function executarExercicio() {
+            var a = Number(document.getElementById('a').value);
+            var b = Number(document.getElementById('b').value);
+            var c = Number(document.getElementById('c').value);
+            var d = Number(document.getElementById('d').value);
+            // implemente a partir daqui
+            var r = 0; // atribua o resultado dos seus algoritmos a r
+
+           
+                if (a>b && a>c && a>d) {
+                    r=a;
+                }
+
+                if (b>a && b>c && b>d) {
+                    r=b;
+                }
+                if (c>b && c>a && c>d) {
+                    r=c;
+                }
+                if (d>b && d>a && d>c) {
+                    r=d;
+                }
+                    
+            document.getElementById('resultadomaior').innerHTML = "É o maior valor "+ r;
+
+                if (a<b && a<c && a<d) {
+                    r=a;
+                }
+
+                if (b<a && b<c && b<d) {
+                    r=b;
+                }
+                if (c<b && c<a && c<d) {
+                    r=c;
+                }
+                if (d<b && d<a && d<c) {
+                    r=d;
+                }
+
+            document.getElementById('resultadomenor').innerHTML = "É o menor valor "+ r;
+        }
+    </script>
+</body>
+
+</html>
